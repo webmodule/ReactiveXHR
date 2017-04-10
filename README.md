@@ -47,15 +47,16 @@ rx.send("update_trip",{ rider_name : "Ramo"}, { "code" : "002" });
 
 //Possible ways to subscribe
 rx.on("update_trip",function(req, resp, meta){
- // do something
+ // do something 
 });
 rx.on("update_trip/code=002",function(req, resp, meta){
- // do something
+ // do something based on metadata values
 });
 rx.on("update_trip?rider_name=Ramo",function(req, resp, meta){
- // do something
+ // do something based on request values
 });
 rx.on("update_trip#rider_name=Ramo",function(req, resp, meta){
+  //do something based on response values
  // assuming response is if format { rider_name : "Ramo"}
 });
 
